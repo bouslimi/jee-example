@@ -23,17 +23,47 @@
 - Right click on the project name,
 - Select Configure - Convert to Maven Project.
 
-### Basics
 
-#### MVC Design Pattern
+## MVC Design Pattern
+
 MVC Design Pattern (Model-View-Controller) is an architectural pattern which separates an application into 3 main groups of components: Models, Views and Controllers.
 
-#### Model
+### Model
 It contains the application data (Java Objects / Beans).
 
-#### View
+### View
 It represents the model's data to the user (JSP: Java Server Pages).
 
-#### Controller
+### Controller
 Exists between the View and the Model to control the data flow (Servlets).
+
+
+## Expression Language EL
+
+Expression Language (EL) is a script language that allows access to Java Objects/Beans through JSP.
+
+```HTML
+<p>Full Name: ${ person.fullName }</p>
+```
+
+
+## JSTL
+
+Java server pages Standard Tag Library (JSTL) is a collection of JSP tags.
+
+#### JSTL Tag Libraries
+- **JSTL Core**: core library (conditions, iterations, etc.),
+- **JSTL fmt**: i18n-capable formatting library (data formatting, i18n),
+- **JSTL XML**: XML library (manipulating XML data),
+- **JSTL SQL**: sql library (write SQL requests),
+- **JSTL functions**: functions library (manipulating strings).
+
+#### JSTL example
+
+```XML
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+<p><c:out value="Hello World!" /></p>
+```
 

@@ -25,12 +25,22 @@
 	</welcome-file-list>
 	<servlet>
 		<description></description>
-		<display-name>Contact</display-name>
-		<servlet-name>Contact</servlet-name>
-		<servlet-class>com.trigger_soft.servlets.Contact</servlet-class>
+		<display-name>ContactUs</display-name>
+		<servlet-name>ContactUs</servlet-name>
+		<servlet-class>com.trigger_soft.servlets.ContactUs</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Contact</servlet-name>
+		<servlet-name>ContactUs</servlet-name>
 		<url-pattern>/contact</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>Profile</display-name>
+		<servlet-name>Profile</servlet-name>
+		<servlet-class>com.trigger_soft.servlets.Profile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Profile</servlet-name>
+		<url-pattern>/profile</url-pattern>
 	</servlet-mapping>
 </web-app>
