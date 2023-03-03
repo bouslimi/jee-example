@@ -11,7 +11,20 @@
 
 	<%@ include file="menu.jsp"%>
 
-	<h2>Profile</h2>
+	<!-- Recommended method (using EL with HTML) -->
+	<h3>${ lang == "fr" ? "Votre profil" : "Your profile" }</h3>
+
+	<%
+	/*
+	// Not recommended method (using Java with HTML)
+	String lang = (String) request.getAttribute("lang");
+	if (lang.equalsIgnoreCase("fr"))
+		out.println("<h3>Votre profil</h3>");
+	else
+		out.println("<h3>Your profile</h3>");
+	*/
+	%>
+
 	<div style="margin-top: 10px;">
 		<span style="font-weight: bold;">Full Name:</span> <span>${ person.fullName }</span>
 	</div>

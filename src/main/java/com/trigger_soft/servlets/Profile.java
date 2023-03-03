@@ -17,6 +17,9 @@ public class Profile extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String lang = request.getParameter("lang");
+		request.setAttribute("lang", lang);
+
 		Person person = new Person();
 		person.setFullName("Nelson Amine");
 		person.setAge(30);

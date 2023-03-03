@@ -6,22 +6,40 @@
 <head>
 <meta charset="UTF-8">
 <title>Contact us</title>
+<style type="text/css">
+	div {
+		margin-top: 10px;
+	}
+</style>
 </head>
 <body>
 
 	<%@ include file="menu.jsp"%>
 
-	<!-- Recommended method (using EL with HTML) -->
-	<h3>${ lang == "fr" ? "Bienvenue sur la page Contactez-nous !" : "Welcome to Contact us page!" }</h3>
+	<h3>Contact Us</h3>
 
-	<!-- Not recommended method (using Java with HTML) -->
-	<%
-	String lang = (String) request.getAttribute("lang");
-	if (lang.equalsIgnoreCase("fr"))
-		out.println("<h3>Bienvenue sur la page Contactez-nous !</h3>");
-	else
-		out.println("<h3>Welcome to Contact us page!</h3>");
-	%>
+	<form method="post" action="contact">
+		<div>
+			<label for="name">Your name: </label> <input type="text" name="name"
+				id="name" required />
+		</div>
+		<div>
+			<label for="email">Your email: </label> <input type="email"
+				name="email" id="email" required />
+		</div>
+		<div>
+			<label for="subject">Subject: </label> <input type="text"
+				name="subject" id="subject" required />
+		</div>
+		<div>
+			<label for="message">Message: </label>
+			<textarea name="message" id="message"></textarea>
+		</div>
+
+		<input type="submit" />
+	</form>
+
+	<span>${ deliveryMsg }</span>
 
 </body>
 </html>

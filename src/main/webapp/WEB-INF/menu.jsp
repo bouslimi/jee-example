@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <ul>
-	<li><a href="/jee-example/">Home</a></li>
-	<li><a href="/jee-example/profile">Profile</a></li>
-	<li><a href="/jee-example/contact?lang=en">Contact us</a></li>
+	<li><a href="home">Home</a></li>
+	<li><a href="profile?lang=en">Profile</a></li>
+	<li><a href="contact">Contact us</a></li>
 </ul>

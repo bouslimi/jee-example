@@ -14,6 +14,10 @@
 		<servlet-name>Home</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
 	<display-name>jee-example</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
@@ -27,7 +31,7 @@
 		<description></description>
 		<display-name>ContactUs</display-name>
 		<servlet-name>ContactUs</servlet-name>
-		<servlet-class>com.trigger_soft.servlets.ContactUs</servlet-class>
+		<servlet-class>com.trigger_soft.servlets.Contact</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ContactUs</servlet-name>
