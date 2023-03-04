@@ -14,5 +14,7 @@
 
 	<p>Welcome to Home page!</p>
 
+	<a href="signin">Sign in</a>
+
 </body>
 </html>
