@@ -60,10 +60,13 @@ Java server pages Standard Tag Library (JSTL) is a collection of JSP tags.
 
 #### JSTL example
 
-```XML
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+```HTML
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 
+<c:out value="Hello World!" />
 
-<p><c:out value="Hello World!" /></p>
+<c:if test="${ not empty name }">
+	<h1>${ name }</h1>
+</c:if>
 ```
 

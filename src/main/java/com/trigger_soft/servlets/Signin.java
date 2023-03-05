@@ -10,6 +10,7 @@ import com.trigger_soft.controllers.Login;
 
 public class Signin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private String areCredentialsOK;
 
 	public Signin() {
 		super();
@@ -17,13 +18,15 @@ public class Signin extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		areCredentialsOK = null;
+		request.setAttribute("areCredentialsOK", areCredentialsOK);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/signin.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Login login = new Login();
-		boolean areCredentialsOK = login.checkCredentials(request);
-		if (areCredentialsOK) {
+		String areCredentialsOK = login.checkCredentials(request);
+		if (areCredentialsOK.equals("OK")) {
 			response.sendRedirect(response.encodeRedirectURL("./profile"));
 		} else {
 			request.setAttribute("areCredentialsOK", areCredentialsOK);

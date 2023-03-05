@@ -4,14 +4,14 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public class Login {
 
-	public boolean checkCredentials(HttpServletRequest request) {
+	public String checkCredentials(HttpServletRequest request) {
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
 
 		if (login.equals(password)) {
-			return true;
+			return "OK";
 		} else {
-			return false;
+			return "Wrong login and/or password!";
 		}
 	}
 
