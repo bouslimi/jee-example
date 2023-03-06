@@ -38,7 +38,19 @@ It represents the model's data to the user (JSP: Java Server Pages).
 Exists between the View and the Model to control the data flow (Servlets).
 
 
-## Expression Language EL
+
+## JSTL
+
+Java server pages Standard Tag Library (JSTL) is a collection of JSP tags.
+
+### JSTL Tag Libraries
+- **JSTL Core**: core library (conditions, iterations, etc.),
+- **JSTL fmt**: i18n-capable formatting library (data formatting, i18n),
+- **JSTL XML**: XML library (manipulating XML data),
+- **JSTL SQL**: sql library (write SQL requests),
+- **JSTL functions**: functions library (manipulating strings).
+
+### Expression Language EL
 
 Expression Language (EL) is a script language that allows access to Java Objects/Beans through JSP.
 
@@ -46,19 +58,7 @@ Expression Language (EL) is a script language that allows access to Java Objects
 <p>Full Name: ${ person.fullName }</p>
 ```
 
-
-## JSTL
-
-Java server pages Standard Tag Library (JSTL) is a collection of JSP tags.
-
-#### JSTL Tag Libraries
-- **JSTL Core**: core library (conditions, iterations, etc.),
-- **JSTL fmt**: i18n-capable formatting library (data formatting, i18n),
-- **JSTL XML**: XML library (manipulating XML data),
-- **JSTL SQL**: sql library (write SQL requests),
-- **JSTL functions**: functions library (manipulating strings).
-
-#### JSTL example
+### JSTL example
 
 ```HTML
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
@@ -69,4 +69,14 @@ Java server pages Standard Tag Library (JSTL) is a collection of JSP tags.
 	<h1>${ name }</h1>
 </c:if>
 ```
+
+## Data Access Object DAO
+
+### DAO Design Pattern
+DAO Design Pattern is a structural pattern used to isolate the Business (Application) Layer from the Persistence Layer (Database, XML, etc.).
+
+### DAO Design Pattern components
+- Model,
+- Interface,
+- Interface implementation.
 

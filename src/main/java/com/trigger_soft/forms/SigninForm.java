@@ -1,8 +1,8 @@
-package com.trigger_soft.controllers;
+package com.trigger_soft.forms;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-public class Login {
+public class SigninForm {
 
 	public String checkCredentials(HttpServletRequest request) {
 		String login = request.getParameter("login");

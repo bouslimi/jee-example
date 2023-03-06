@@ -1,17 +1,26 @@
 package com.trigger_soft.beans;
 
-public class Person {
+public class User {
 
-	private String fullName;
+	private long id;
+	private String name;
 	private int age;
 	private String gender;
 
-	public String getFullName() {
-		return fullName;
+	public long getId() {
+		return id;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String fullName) {
+		this.name = fullName;
 	}
 
 	public int getAge() {

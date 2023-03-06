@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import com.trigger_soft.controllers.Login;
+import com.trigger_soft.forms.SigninForm;
 
 public class Signin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,10 +24,10 @@ public class Signin extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Login login = new Login();
-		String areCredentialsOK = login.checkCredentials(request);
+		SigninForm signinForm = new SigninForm();
+		String areCredentialsOK = signinForm.checkCredentials(request);
 		if (areCredentialsOK.equals("OK")) {
-			response.sendRedirect(response.encodeRedirectURL("./profile"));
+			response.sendRedirect(response.encodeRedirectURL("./users"));
 		} else {
 			request.setAttribute("areCredentialsOK", areCredentialsOK);
 			this.getServletContext().getRequestDispatcher("/WEB-INF/signin.jsp").forward(request, response);
